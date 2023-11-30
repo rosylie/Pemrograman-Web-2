@@ -1,0 +1,5 @@
+Bookshelf-web 
+1. Buat folder style, asset, script dan file index.html
+2. cari font di Google font atau tempat lain, kemudian copy link 
+3. import style dan script 
+

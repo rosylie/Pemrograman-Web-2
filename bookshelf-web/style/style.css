@@ -1,0 +1,179 @@
+:root{
+    --bg-color : #EEEEEE;
+    --main-color: #393E46;
+    --sec-color: #00ADB5;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    color: var(--main-color);
+}
+
+/* header */
+
+input {
+    border: none; /*remove the default border*/
+}
+
+input::focus {
+    outline: none;}
+
+::placeholder {
+    color: white;
+    font-size: 15px;
+    text-align: center;
+}
+
+::-webkit-scrollbar {
+    display: none;
+}
+
+body{
+    background-color: var(--bg-color);
+    color: white;
+    font-family: "Montserrat", sans-serif;
+}
+
+.navbar{
+    margin: 0 10%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid chocolate;
+    padding: 1rem;
+}
+
+.navbar .title h1{
+    font-weight: 600;
+    font-size: 24;
+}
+
+.navbar .search-bar{
+    background-color: var(--sec-color);
+    border-radius: 40px;
+    padding: 0rem 1rem;
+    width: 20%;
+}
+
+.navbar .search-bar input {
+    border: none;
+    width: 100%;
+    padding: 1rem 0;
+    outline: none;
+    background-color: var(--sec-color);
+    font-size: 15px;
+    color: #EEEEEE;
+    font-weight: 400;
+    border-radius: 40px;
+}
+
+
+/* main */
+.main {
+    margin: 0 10%;
+    margin-top: 4rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    gap: 1rem;
+}
+
+.unread-book, .read-book{
+    display: flex;
+    /* justify-content: center; */
+    align-items: center;
+    flex-direction: column;
+    gap: 4rem;
+    height: 70vh;
+    overflow: scroll;
+}
+
+.unread-book h2, .read-book h2{
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 36px;
+    display: flex;
+    align-items: center;
+}
+
+.card-book{
+    background-color: var(--sec-color);
+    /* color: var(--bg-color); */
+    padding: 1.5rem;
+    border-radius: 20px;
+}
+
+.card-book .book-title {
+    border-bottom: 1px solid #393E46;
+    margin-bottom: 1rem;
+}
+
+.card-book .book-title h3{
+    color: var(--bg-color);
+    font-weight: 500;
+    font-size: 22px;
+    line-height: 33px;
+    text-align: center;
+}
+
+.card-book .book-title p{
+    text-align: end;
+    color: var(--bg-color);
+    font-style: italic;
+    font-weight: 300;
+    font-size: 20px;
+    line-height: 30px;
+}
+
+.book-desc h5 {
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 30px;
+}
+
+.book-desc p {
+    margin-top: 1rem;
+    font-weight: 300;
+    font-size: 18px;
+    line-height: 27px;
+    height: 80%;
+    /* background-color: red; */
+    overflow: scroll;
+    width: 100%;
+}
+
+.book-action{
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    justify-content: flex-end;
+}
+
+/* untuk ukuran tablet ke hp  */
+@media screen and (max-width: 768px) {
+    .navbar .title h1{
+        font-size: 18px;
+    }
+
+    .book-desc {
+        width: 280px;
+        height: 180px;
+    }
+
+    .book-desc h5 {
+        font-size: 16px;
+    }
+
+    .book-desc p {
+        font-size: 15px;
+    }
+
+    .main {
+        flex-wrap: wrap-reverse;
+    }
+}
+
+
+
