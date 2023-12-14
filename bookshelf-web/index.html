@@ -16,22 +16,52 @@
                 <h1>My Bookshelf</h1>
             </div>
             <div class="search-bar">
-                <input type="text" placeholder="Search your book here">
+                <form id="search-bar-form">
+                    <input type="text" placeholder="Search your book here" id="search-bar-input">                </form>            
             </div>
         </nav>
     </header>
 
     <main class="main">
+
+        <section class="form-add">
+            <form id="form-add" class="form">
+                <h4>Tambah Data Buku Baru</h4>
+                <div class="input-group">
+                    <label for="book-title">Judul Buku</label>
+                    <input type="text" placeholder="Tulis judul buku disini" required id="book-title">
+                </div>
+                <div class="input-group">
+                    <label for="book-year">Tahun</label>
+                    <input type="number" placeholder="Tahun terbit" required id="book-year">
+                </div>
+                <div class="input-group">
+                    <label for="book-author">Nama Pengarang</label>
+                    <input type="text" placeholder="Nama Pengarang " required id="book-author">
+                </div>
+                <div class="input-checkbox">
+                    <label for="book-done-type">Tanda selesai baca</label>
+                    <input type="checkbox" name="" id="book-done-type">
+                </div>
+                <div class="button-submit">
+                    <input type="submit" value="Tambah Buku" id="button-submit">
+                </div>
+            </form>
+        </section>
+
         <section class="unread-book" id="unread-book">
-            <h2>Unread Book</h2>
-            <div class="card-book">
-                <div class="book-title">
+            <!-- <div class="card-book">
+                <div class="book-head">
                     <h3>BJ Habibie</h3>
                     <p>Habibie</p>
                 </div>
                 <div class="book-desc">
                     <h5>Short description</h5>
-                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eum amet quisquam quasi veritatis velit optio, distinctio aperiam nemo corrupti eos, earum est incidunt molestiae laboriosam porro expedita? Mollitia, voluptatibus obcaecati?</p>
+                    <p>
+                        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eum amet quisquam quasi veritatis velit optio, distinctio aperiam nemo corrupti eos, earum est incidunt molestiae laboriosam porro expedita? Mollitia, voluptatibus obcaecati?
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis consectetur id temporibus dolores aut nulla explicabo. Veritatis minus harum asperiores sequi eveniet ex ratione natus tempore, atque beatae expedita eaque.
+                        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ipsa, omnis voluptate repellendus et illum in ab repudiandae id exercitationem tempora cum excepturi dolorum eligendi quod laboriosam dignissimos maiores. Id, perferendis.
+                    </p>
                 </div>
                 <div class="book-action">
                     <div class="icon-trash">
@@ -41,13 +71,12 @@
                         <img src="./assets/check.png" alt="">
                     </div>
                 </div>
-            </div>
+            </div> -->
         </section>
-
+        
         <section class="read-book" id="read-book">
-            <h2>Unread Book</h2>
-            <div class="card-book">
-                <div class="book-title">
+            <!-- <div class="card-book">
+                <div class="book-head">
                     <h3>BJ Habibie</h3>
                     <p>Habibie</p>
                 </div>
@@ -63,31 +92,15 @@
                         <img src="./assets/check.png" alt="">
                     </div>
                 </div>
-            </div>
+            </div> -->
         </section>
 
-        <section class="unread-book" id="unread-book">
-            <h2>Unread Book</h2>
-            <div class="card-book">
-                <div class="book-title">
-                    <h3>BJ Habibie</h3>
-                    <p>Habibie</p>
-                </div>
-                <div class="book-desc">
-                    <h5>Short description</h5>
-                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eum amet quisquam quasi veritatis velit optio, distinctio aperiam nemo corrupti eos, earum est incidunt molestiae laboriosam porro expedita? Mollitia, voluptatibus obcaecati?</p>
-                </div>
-                <div class="book-action">
-                    <div class="icon-trash">
-                        <img src="./assets/trash.png" alt="">
-                    </div>
-                    <div class="icon-check">
-                        <img src="./assets/check.png" alt="">
-                    </div>
-                </div>
-            </div>
-        </section>
+        
+        
     </main>
+    <div class="button-delete">
+        <input type="submit" value="Delete All Books" id="button-delete">
+    </div>
     <script src="./script/script.js"></script>
 </body>
 </html>
